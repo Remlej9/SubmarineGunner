@@ -4,7 +4,7 @@ const client = new Discord.Client();
 
 client.on("ready", () => {
 	console.log("Hello World");
-	client.user.setActivity('discord.js', { type: 'WATCHING' })
+	client.user.setActivity('submarineguns', { type: 'WATCHING' })
   .then(presence => console.log(`Activity set to ${presence.activities[0].name}`))
   .catch(console.error);
 });
