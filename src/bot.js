@@ -27,7 +27,7 @@ client.on("ready", () => {
 });
 
 var interval = setInterval (function (){
-	    client.channels.cache.get('826133568148602931').send({files: [images[count]]})
+	    client.channels.cache.get('797442340884185118').send({files: [images[count]]})
 	.then(message => console.log(`Sent submarinegun`))
   .catch(console.error);
   count = count + 1;
