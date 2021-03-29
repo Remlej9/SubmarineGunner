@@ -10,11 +10,9 @@ client.on("ready", () => {
 });
 
 var interval = setInterval (function (){
-	    client.channels.cache.get('826133568148602931').send({
-		files: ['https://i.imgur.com/Tivrl2P.jpg']
-	}
+	    client.channels.cache.get('826133568148602931').send({files: ['https://i.imgur.com/Tivrl2P.jpg']})
 	.then(message => console.log(`Sent submarinegun`))
-  .catch(console.error));
+  .catch(console.error);
 }, 5000);
 
 client.login(process.env.BOT_TOKEN);
