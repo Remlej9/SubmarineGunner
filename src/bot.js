@@ -14,7 +14,7 @@ var interval = setInterval (function (){
 		files: ['https://i.imgur.com/Tivrl2P.jpg']
 	}
 	.then(message => console.log(`Sent submarinegun`))
-  .catch(console.error);
+  .catch(console.error));
 }, 5000);
 
 client.login(process.env.BOT_TOKEN);
