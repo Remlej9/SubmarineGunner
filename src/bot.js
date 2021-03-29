@@ -1,5 +1,5 @@
 require('dotenv').config();
-const discord = require('discord.js');
+const Discord = require('discord.js');
 const client = new Discord.client();
 
 client.on("ready", () => {
