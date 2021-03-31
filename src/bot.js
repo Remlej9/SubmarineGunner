@@ -64,7 +64,7 @@ const job11 = schedule.scheduleJob('* * * 11 * *', function(){
   count = 10;
   //console.log("11");
 });
-const job12 = schedule.scheduleJob('0 55 22 31 * *', function(){
+const job12 = schedule.scheduleJob('0 58 20 31 * *', function(){
   count = 11;
   client.channels.cache.get('797442340884185118').send({files: [images[count]]})
 	.then(message => console.log(`Sent submarinegun`))
@@ -90,7 +90,7 @@ var interval = setInterval (function (){
   count = count + 1;
 }, 86400000);*/
 
-const job = schedule.scheduleJob('45 45 19 * * *', function(){
+const job = schedule.scheduleJob('45 45 17 * * *', function(){
 	client.channels.cache.get('797442340884185118').send({files: [images[count]]})
 	.then(message => console.log(`Sent submarinegun`))
 	.catch(console.error);
