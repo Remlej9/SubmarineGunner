@@ -14,7 +14,8 @@ var images = [
 	'https://imgur.com/z7MDAwk.jpg',
 	'https://imgur.com/UcF1CSC.jpg',
 	'https://imgur.com/kw8cLws.jpg',
-	'https://imgur.com/VXf2QBg.jpg'
+	'https://imgur.com/VXf2QBg.jpg',
+	'https://imgur.com/uTQgEGf.jpg'
 ];
 
 var count = 0;
@@ -51,6 +52,9 @@ const job10 = schedule.scheduleJob('* * 10 * *', function(){
 });
 const job11 = schedule.scheduleJob('* * 11 * *', function(){
   count = 10;
+});
+const job11 = schedule.scheduleJob('* * 31 * *', function(){
+  count = 11;
 });
 
 client.on("ready", () => {
