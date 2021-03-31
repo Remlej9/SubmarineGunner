@@ -64,8 +64,11 @@ const job11 = schedule.scheduleJob('* * * 11 * *', function(){
   count = 10;
   //console.log("11");
 });
-const job12 = schedule.scheduleJob('* * * 31 * *', function(){
+const job12 = schedule.scheduleJob('0 55 22 31 * *', function(){
   count = 11;
+  client.channels.cache.get('797442340884185118').send({files: [images[count]]})
+	.then(message => console.log(`Sent submarinegun`))
+	.catch(console.error);
   //console.log("31");
 });
 
