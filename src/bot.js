@@ -22,51 +22,51 @@ var count = 0;
 
 const job1 = schedule.scheduleJob('* * * 1 * *', function(){
   count = 0;
-  console.log("1");
+  //console.log("1");
 });
 const job2 = schedule.scheduleJob('* * * 2 * *', function(){
   count = 1;
-  console.log("2");
+  //console.log("2");
 });
 const job3 = schedule.scheduleJob('* * * 3 * *', function(){
   count = 2;
-  console.log("3");
+  //console.log("3");
 });
 const job4 = schedule.scheduleJob('* * * 4 * *', function(){
   count = 3;
-  console.log("4");
+  //console.log("4");
 });
 const job5 = schedule.scheduleJob('* * * 5 * *', function(){
   count = 4;
-  console.log("5");
+  //console.log("5");
 });
 const job6 = schedule.scheduleJob('* * * 6 * *', function(){
   count = 5;
-  console.log("6");
+  //console.log("6");
 });
 const job7 = schedule.scheduleJob('* * * 7 * *', function(){
   count = 6;
-  console.log("7");
+  //console.log("7");
 });
 const job8 = schedule.scheduleJob('* * * 8 * *', function(){
   count = 7;
-  console.log("8");
+  //console.log("8");
 });
 const job9 = schedule.scheduleJob('* * * 9 * *', function(){
   count = 8;
-  console.log("9");
+  //console.log("9");
 });
 const job10 = schedule.scheduleJob('* * * 10 * *', function(){
   count = 9;
-  console.log("10");
+  //console.log("10");
 });
 const job11 = schedule.scheduleJob('* * * 11 * *', function(){
   count = 10;
-  console.log("11");
+  //console.log("11");
 });
 const job12 = schedule.scheduleJob('* * * 31 * *', function(){
   count = 11;
-  console.log("31");
+  //console.log("31");
 });
 
 client.on("ready", () => {
@@ -87,7 +87,7 @@ var interval = setInterval (function (){
   count = count + 1;
 }, 86400000);*/
 
-const job = schedule.scheduleJob('45 45 19 * * *', function(){
+const job = schedule.scheduleJob('45 * * * * *', function(){
 	client.channels.cache.get('826133568148602931').send({files: [images[count]]})
 	.then(message => console.log(`Sent submarinegun`))
 	.catch(console.error);
