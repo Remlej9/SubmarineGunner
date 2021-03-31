@@ -53,7 +53,7 @@ const job10 = schedule.scheduleJob('* * 10 * *', function(){
 const job11 = schedule.scheduleJob('* * 11 * *', function(){
   count = 10;
 });
-const job11 = schedule.scheduleJob('* * 31 * *', function(){
+const job12 = schedule.scheduleJob('* * 31 * *', function(){
   count = 11;
 });
 
