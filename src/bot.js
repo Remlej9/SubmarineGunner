@@ -1,6 +1,7 @@
 require('dotenv').config();
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const schedule = require('node-schedule');
 
 var images = [
 	'https://imgur.com/E9I7vt0.jpg',
@@ -20,17 +21,26 @@ var images = [
 var count = 0;
 
 client.on("ready", () => {
-	console.log("Hello World");
+	console.log("Ready for some sexy guns!");
 	client.user.setActivity('submarineguns', { type: 'WATCHING' })
   .then(presence => console.log(`Activity set to ${presence.activities[0].name}`))
   .catch(console.error);
 });
 
-var interval = setInterval (function (){
+// OLD SCRIPT
+
+/*var interval = setInterval (function (){
 	    client.channels.cache.get('797442340884185118').send({files: [images[count]]})
 	.then(message => console.log(`Sent submarinegun`))
   .catch(console.error);
   count = count + 1;
-}, 86400000);
+}, 86400000);*/
+
+const job = schedule.scheduleJob('45 45 19 * * *', function(){
+	client.channels.cache.get('826133568148602931').send({files: [images[count]]})
+	.then(message => console.log(`Sent submarinegun`))
+	.catch(console.error);
+  count = count + 1;
+});
 
 client.login(process.env.BOT_TOKEN);
