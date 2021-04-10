@@ -4,72 +4,65 @@ const client = new Discord.Client();
 const schedule = require('node-schedule');
 
 var images = [
-	'https://imgur.com/piYVrpR.jpg',
-	'https://imgur.com/0pVaIp9.jpg',
-	'https://imgur.com/tZX8sar.jpg',
-	'https://imgur.com/O8tHGFG.jpg',
-	'https://imgur.com/SBP40yW.jpg',
-	'https://imgur.com/rH5jbGN.jpg',
-	'https://imgur.com/IC50Emf.jpg',
-	'https://imgur.com/z7MDAwk.jpg',
-	'https://imgur.com/UcF1CSC.jpg',
-	'https://imgur.com/kw8cLws.jpg',
 	'https://imgur.com/VXf2QBg.jpg',
-	'https://imgur.com/uTQgEGf.jpg'
+	'https://imgur.com/gGMYiDh.jpg',
+	'https://imgur.com/SlQVejJ.jpg',
+	'https://imgur.com/tbi12uB.jpg',
+	'https://imgur.com/bAXKRHy.jpg',
+	'https://imgur.com/UNAnKyc.jpg',
+	'https://imgur.com/c0EpfWb.jpg',
+	'https://imgur.com/CQRlK4j.jpg',
+	'https://imgur.com/yaNJSqa.jpg',
+	'https://imgur.com/UpgOG5j.jpg',
+	'https://imgur.com/wtuRh9m.jpg'
+	
 ];
 
 var count = 0;
 
-const job1 = schedule.scheduleJob('* * * 1 * *', function(){
-  count = 0;
-  //console.log("1");
-});
-const job2 = schedule.scheduleJob('* * * 2 * *', function(){
+const job1 = schedule.scheduleJob('* * * 12 * *', function(){
   count = 1;
-  //console.log("2");
+  //console.log("12");
 });
-const job3 = schedule.scheduleJob('* * * 3 * *', function(){
+const job2 = schedule.scheduleJob('* * * 13 * *', function(){
   count = 2;
-  //console.log("3");
+  //console.log("13");
 });
-const job4 = schedule.scheduleJob('* * * 4 * *', function(){
+const job3 = schedule.scheduleJob('* * * 14 * *', function(){
   count = 3;
-  //console.log("4");
+  //console.log("14");
 });
-const job5 = schedule.scheduleJob('* * * 5 * *', function(){
+const job4 = schedule.scheduleJob('* * * 15 * *', function(){
   count = 4;
-  //console.log("5");
+  //console.log("15");
 });
-const job6 = schedule.scheduleJob('* * * 6 * *', function(){
+const job5 = schedule.scheduleJob('* * * 16 * *', function(){
   count = 5;
-  //console.log("6");
+  //console.log("16");
 });
-const job7 = schedule.scheduleJob('* * * 7 * *', function(){
+const job6 = schedule.scheduleJob('* * * 17 * *', function(){
   count = 6;
-  //console.log("7");
+  //console.log("17");
 });
-const job8 = schedule.scheduleJob('* * * 8 * *', function(){
+const job7 = schedule.scheduleJob('* * * 18 * *', function(){
   count = 7;
-  //console.log("8");
+  //console.log("18");
 });
-const job9 = schedule.scheduleJob('* * * 9 * *', function(){
+const job8 = schedule.scheduleJob('* * * 19 * *', function(){
   count = 8;
-  //console.log("9");
+  //console.log("19");
 });
-const job10 = schedule.scheduleJob('* * * 10 * *', function(){
+const job9 = schedule.scheduleJob('* * * 20 * *', function(){
   count = 9;
-  //console.log("10");
+  //console.log("20");
+});
+const job10 = schedule.scheduleJob('* * * 21 * *', function(){
+  count = 10;
+  //console.log("21");
 });
 const job11 = schedule.scheduleJob('* * * 11 * *', function(){
-  count = 10;
+  count = 0;
   //console.log("11");
-});
-const job12 = schedule.scheduleJob('0 58 20 31 * *', function(){
-  count = 11;
-  client.channels.cache.get('797442340884185118').send({files: [images[count]]})
-	.then(message => console.log(`Sent submarinegun`))
-	.catch(console.error);
-  //console.log("31");
 });
 
 client.on("ready", () => {
